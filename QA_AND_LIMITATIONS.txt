@@ -1,0 +1,45 @@
+v1.6 ADDENDUM (18 Nov 2026)
+- 38/38 offline tests pass on Linux in development. Windows confirmation pending.
+- Importer maps OBSERVED GBGB API fields, including first sectional and official
+  runner times. It has a regression fixture derived from the user-supplied
+  TRUNCATED meeting JSON sample (not a whole meeting).
+- Actual existing 27 full meeting documents have not been supplied to this
+  runtime, so their complete normalisation and count reconciliation must run
+  locally using GBGB_BUILD_RACE_DATABASE.bat.
+- No GBGB split distance, bend-position sectionals or calculated speed ratings.
+- Original going and beaten distance are kept as strings pending semantics.
+- A source race-index mismatch (323 versus 321) requires data-quality review.
+
+QA RECORD - 2026-11-18
+
+Verified during creation:
+- Published Betfair ANZ greyhound download links for annual 2023, 2024, 2025 ZIPs
+  and monthly 2026 files were followed from Betfair's own listing.
+- TrapStats actual public ZIP endpoint from the site's download link was identified.
+- Racing Queensland live list includes sectionals into 2024, with CSV/ZIP/PDF links.
+- Australian Racing Open Data's three CSV dataset URLs and weather paths are present.
+- Local parser/import test suite: 13 of 13 tests PASSED, including local HTTP download,
+  ZIP validation, date filtering, archive import, checkpoint dates and PDF fallback.
+- Python source syntax compiled successfully.
+
+NOT verified here:
+- Real bulk HTTP downloads or actual provider response format on the user's computer;
+  the build environment has no internet DNS access.
+- Live ZIP member structure and full field completeness for Betfair yearly archives.
+- Racing Queensland's proprietary CSV layouts, which are staged verbatim only.
+- Whether publishers will permit sustained large-scale downloading from the user's IP.
+- UK three-year full race coverage: not offered by the confirmed free sources.
+- Accuracy of speed figures: no speed figure models are built yet.
+
+LAUNCH GATES
+1. Run RUN_TESTS.bat and confirm all tests pass.
+2. Run RUN_PILOT.bat and inspect failures / source columns.
+3. Check data/reports/ to ensure names, dates and timing columns are captured.
+4. Only then start RUN_3_YEARS.bat and monitor occasional failures.
+5. Check country/track/date coverage before calculating track-standard times.
+
+SAFE HANDLING
+No website logins, no CAPTCHA bypass, no cloud uploads, no Git push.
+No Betfair UK price-file collector: its site states licence restrictions.
+The downloaded free Betfair AU data still has rights that should be checked for
+further distribution or commercial deployment.

@@ -1,0 +1,27 @@
+To: info@gbgb.org.uk
+Subject: Request for permission to access historical GBGB greyhound racing results data
+
+Hello,
+
+I'm developing a personal research database for British greyhound racing. I
+would like to analyse historical performances and build track-and-distance
+speed figures, early pace and finishing-strength ratings.
+
+Could you advise whether GBGB offers a licensed historical results export, or
+whether you can give written permission for limited automated access to the
+JSON results interface used by your website?
+
+My first collection period would be 18 November 2023 to 17 November 2026,
+covering all GBGB-licensed tracks. I'd like to retain every race's date, time,
+distance, grade, track going, finishing order, trap, individual run times,
+sectionals, beaten distances, running comments and trials where available.
+
+The initial purpose is private research and model backtesting, not data
+redistribution. Please also let me know whether derived statistical ratings
+would be permitted, whether there is a fee or rate limit, and whether
+commercial use would require a separate licence in future.
+
+If you cannot grant access to the public JSON interface, could you direct me
+to your authorised data partner or bulk data licensing contact?
+
+Many thanks.

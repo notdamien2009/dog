@@ -1,0 +1,27 @@
+DOG RACE v1.6 — GBGB VERIFIED FIELD MAPPING, 18 NOV 2026
+
+Observed in the uploaded GBGB pilot reports:
+- 27 meeting documents covering 2024-06-01 and 2026-11-16
+- 323 races in meeting JSON; 321 distinct race IDs in date index
+- 1938 trap objects; 1837 with dog IDs; 1794 result positions
+- 1758 individual run times; 1277 first sectional times
+
+Changes:
+- New gbgb_normalize.py parses meeting list -> races -> traps using actual key names.
+- Stores race rows, every trap (including vacancies), dog identity, finish position,
+  original margin string, raw going, run/adjusted/first-split times, weight,
+  SP, trainer, owner, birth/breeding and comments.
+- Saves source JSON; meeting hash protects idempotent incremental refresh.
+- Rejects unrecognised schema and duplicate trap/race IDs instead of guessing.
+- Keeps original raw JSON and prior normalized rows if an update fails.
+- Restarts the existing collection without redownloading already cached JSON.
+- Automatically normalises newly downloaded meetings and remaps cached meetings
+  if the previous version left them staged.
+- One-click offline backfill: GBGB_BUILD_RACE_DATABASE.bat.
+- GBGB_CHECK_DATA_QUALITY.bat writes per-track and per-date CSV coverage and QA.
+- Updated pilot and history BAT files generate the quality report as well.
+- Legacy Australia collector/data remains unchanged.
+
+Not claimed: complete 3-year GBGB coverage, split-marker distance, rear sectionals,
+calculated speed figures, or verified execution against all 27 full meeting JSON files.
+No live web collection was run from this development environment.

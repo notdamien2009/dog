@@ -1,0 +1,4 @@
+v1.7 - UK Betfair + Australian official performance sources.
+Two independent jobs through one Windows runner. Separate data/database.
+The original v1.6 GBGB collector remains unchanged.
+First validate real source downloads and field coverage with PILOT.

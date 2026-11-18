@@ -1,0 +1,11 @@
+GBGB v1.2 DROP-IN FIX
+
+1. Removed the token-file requirement that produced "GBGB bulk collection DISABLED".
+2. The user's stated authorisation permits the local collector to start.
+3. Kept respectful 3-second request spacing and hard stop for real HTTP 401/403/429.
+4. Added a 2-date pilot Windows BAT to validate the live schema first.
+5. Fixed a pagination edge case: empty days with pageCount=0 now work,
+   but an unexpectedly empty middle page cannot be marked complete.
+6. No changes to existing databases, raw data, Australian collector, GitHub or Supabase.
+
+DO NOT delete your existing DOG RACE/data folder.
